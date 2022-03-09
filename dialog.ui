@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>1551</width>
+     <height>851</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabBar::tab {
+	border-color: rgb(170, 170, 0);
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fade02, stop: 0.4 #fade02,
+                                stop: 0.5 #fade02, stop: 1.0 #fade02);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab_15">
+    <attribute name="title">
+     <string>Employés</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>1501</width>
+       <height>801</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #085394, stop: 0.4 #085394,
+                                stop: 0.5 #085394, stop: 1.0 #085394);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_16">
+      <attribute name="title">
+       <string>Ajouter </string>
+      </attribute>
+      <widget class="QPushButton" name="ajouteremp">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>420</y>
+         <width>311</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_64">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>220</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Adresse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="CIN">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>90</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_65">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>260</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Adresse mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_68">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>90</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>CIN</string>
+       </property>
+       <property name="wordWrap">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_69">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>130</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Prenomemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>170</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Nomemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>130</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Prénom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Adresseemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>220</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Adresse_mailemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>260</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_79">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>300</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Date de naissance</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Datedenaissanceemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>300</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_81">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>340</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Département</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Departementemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>340</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>370</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Date d'embauche</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateembaucheemp">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>370</y>
+         <width>171</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_17">
+      <attribute name="title">
+       <string>Afficher </string>
+      </attribute>
+      <widget class="QLineEdit" name="id_rechercheemp">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="rechercheemp">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>20</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Recherche</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_71">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>100</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Nomemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>100</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_73">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>190</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Adresse mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_74">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>130</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Prénom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Prenomemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>130</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_75">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>70</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>CIN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifieremp">
+       <property name="geometry">
+        <rect>
+         <x>1150</x>
+         <y>320</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="supprimeremp">
+       <property name="geometry">
+        <rect>
+         <x>1150</x>
+         <y>360</y>
+         <width>231</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="CINemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1282</x>
+         <y>70</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="imprimer_emp">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>490</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_67">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>160</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Adresse </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Adresseemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1282</x>
+         <y>160</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Adressemailemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>190</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_82">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>220</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Date de naissance</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_83">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>250</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Département</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Datedenaissanceemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>220</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Departementemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>250</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>280</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Date d'embauche</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateembaucheemp_afficher">
+       <property name="geometry">
+        <rect>
+         <x>1280</x>
+         <y>280</y>
+         <width>171</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="affichageemp">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>1031</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pdf_em">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>490</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tri_emp">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>480</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Trier </string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_18">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="title">
+       <string>Statistique</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_19">
+    <attribute name="title">
+     <string>Départements </string>
+    </attribute>
+    <widget class="QTabWidget" name="montant_afficher_dependance">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1171</width>
+       <height>691</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #085394, stop: 0.4 #085394,
+                                stop: 0.5 #085394, stop: 1.0 #085394);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab_20">
+      <attribute name="title">
+       <string>Ajouter </string>
+      </attribute>
+      <widget class="QLabel" name="label_76">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>181</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>id</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="iddep">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>80</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_78">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Nom </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajouterdep">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>200</y>
+         <width>291</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nomdep">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>110</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_21">
+      <attribute name="title">
+       <string>Afficher </string>
+      </attribute>
+      <widget class="QTableView" name="affichage_dep">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>551</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_90">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>70</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>id</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifier_dep">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>290</y>
+         <width>221</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="supprimer_dep">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>340</y>
+         <width>221</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="id_recherche_dep">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>20</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="recherche_dep">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>20</y>
+         <width>151</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Recherche</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="id_affichage_dep">
+       <property name="geometry">
+        <rect>
+         <x>890</x>
+         <y>70</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="imprimer_dependance">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>530</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_72">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>110</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Nom_affichage_dep">
+       <property name="geometry">
+        <rect>
+         <x>890</x>
+         <y>110</y>
+         <width>171</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="tri_dep">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>400</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+padding: 0 8px;
+background: #085394;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>Trier </string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_25">
+      <attribute name="title">
+       <string>Statistique</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
