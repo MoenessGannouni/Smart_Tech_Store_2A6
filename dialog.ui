@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1122</width>
+    <height>721</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fade02, stop: 0.4 #fade02,
+                                stop: 0.5 #fade02, stop: 1.0 #fade02);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="client">
+      <attribute name="title">
+       <string>Client</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_18">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget_10">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #085394, stop: 0.4 #085394,
+                                stop: 0.5 #085394, stop: 1.0 #085394);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="ajouterC_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <attribute name="title">
+           <string>Ajouter </string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QLabel" name="cin_11">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Cin</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="ajouter_cin_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="nom_7">
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="ajouter_nom_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="prenom_7">
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Prenom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="ajouter_prenom_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="adresse_7">
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Adresse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="ajouter_adresse_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="adresse_mail_4">
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Adresse mail</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLineEdit" name="ajouter_adresseMail_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="dateNaissance_7">
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Date naissance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QDateEdit" name="ajouter_dateN_4">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::StrongFocus</enum>
+             </property>
+             <property name="acceptDrops">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+
+
+
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="quitter_4">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Quitter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="ajouterClient_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Ajouter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="afficher_4">
+          <attribute name="title">
+           <string>Afficher </string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="7" column="3">
+            <widget class="QPushButton" name="modifierClient_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Modifier</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLineEdit" name="modifier_prenom_4">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="prenom_8">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Prenom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="dateNaissance_8">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Date Naissance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="cin_12">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Cin</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="rechercherClient_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Recherche</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="adresseMail_4">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Adresse mail</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="adresse_8">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Adresse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QPushButton" name="tri_id_activite_6">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Trier par nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="tri_dateAjout_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Trier par date d'ajout</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="cinClient_8">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLineEdit" name="modifier_adresseMail_4">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="nom_8">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLineEdit" name="modifier_nom_4">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="recherche_4">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Rechercher par prenom,nom...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QDateEdit" name="modifier_dateN_4">
+             <property name="styleSheet">
+              <string notr="true">
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+
+
+
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="7" colspan="2">
+            <widget class="QTableView" name="affichageClient">
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLineEdit" name="modifier_adresse_4">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QPushButton" name="supprimerClient_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="pdf_6">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>PDF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_9">
+          <attribute name="title">
+           <string>Mailing</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Historique">
+      <attribute name="title">
+       <string>Historique </string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_21">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget_11">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #085394, stop: 0.4 #085394,
+                                stop: 0.5 #085394, stop: 1.0 #085394);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="ajouterH_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <attribute name="title">
+           <string>Ajouter </string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="3" column="2">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QPushButton" name="Quitter">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Quitter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="cin_13">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Cin</string>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QComboBox" name="cin_client">
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QComboBox:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QComboBox:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="ajouterProduit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Ajouter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="nom_produit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="nomProduit_5">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Nom produit</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QLabel" name="dateAchat_5">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Comic Sans MS</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+             <property name="text">
+              <string>Date d'achat</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="3">
+            <widget class="QDateTimeEdit" name="date_achat">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+
+
+
+
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="afficherH_3">
+          <attribute name="title">
+           <string>Afficher </string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="3" column="5">
+            <widget class="QDateTimeEdit" name="modifier_dateAchat_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+
+
+
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QPushButton" name="tri_nomProduit_3">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Trier par nom produit</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3" colspan="2">
+            <widget class="QLabel" name="dateAchat_6">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Date d'achat</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="5" colspan="3">
+            <widget class="QTableView" name="affichageProduit_3">
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="rechercheP_3">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Rechercher par produit,date d'achat...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLineEdit" name="modifier_nomProduit_3">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="tri_dateAchat_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Trier par date d'achat</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="nomProduit_6">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Nom Produit</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4" colspan="2">
+            <widget class="QPushButton" name="modifierProduit_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Modifier</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="rechercherProduit_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Recherche</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3" colspan="2">
+            <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(37, 39, 48);
+
+border-radius:  10px;
+padding-left: 20px;
+padding-right: 20px;
+
+background: #fade02;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+
+
+
+</string>
+             </property>
+             <property name="text">
+              <string>Id achat</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="4" colspan="2">
+            <widget class="QPushButton" name="supprimerAchat">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QLineEdit" name="id_Achat">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+border: 1px solid rgb(37, 39, 48);
+border-radius: 10px;
+color: #FFF;
+padding-left: 20px;
+padding-right: 20px;
+background-color: rgb(34, 36, 44);
+
+}
+QLineEdit:hover {
+border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+border: 2px solid rgb(85, 170, 255);
+background-color: rgb(43, 45, 56);
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Taper ici</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="pdf_7">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>5</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(205, 231, 255);
+padding: 0 8px;
+background-color: rgb(87, 150, 212);
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+}
+
+QPushButton:hover  { 
+background-color: rgb(95, 166, 232);
+}
+
+QPushButton:pressed  { 
+background-color: rgb(82, 142, 199	);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>PDF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_10">
+          <attribute name="title">
+           <string>Fidelite</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
