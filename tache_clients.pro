@@ -1,5 +1,6 @@
 QT       += core gui
 QT += sql
+QT  += svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -22,14 +23,20 @@ SOURCES += \
     dialog.cpp \
     historique.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qrcode.cpp \
+    qrcodegeneratordemo.cpp \
+    qrcodegeneratorworker.cpp \
+    qrwidget.cpp
 
 HEADERS += \
     client.h \
     connection.h \
     dialog.h \
     historique.h \
-    mainwindow.h
+    mainwindow.h \
+    qrcode.h \
+    qrwidget.h
 
 FORMS += \
     dialog.ui \

@@ -31,6 +31,16 @@ private slots:
 
     void on_supprimerAchat_clicked();
 
+    void on_modifierProduit_3_clicked();
+
+    void on_rechercherClient_4_clicked();
+
+    void on_tri_nom_clicked();
+
+    void on_tri_date_clicked();
+
+    void on_QRCode_clicked();
+
 private:
     Ui::Dialog *ui;
     Clients Etmp;

@@ -42,6 +42,9 @@ public:
     QSqlQueryModel * afficher();
     bool supprimer(int);
     bool modifier();
+    QSqlQueryModel * rechercherNom(QString);
+    QSqlQueryModel * triNom();
+    QSqlQueryModel * triDate();
 
 
 

@@ -68,3 +68,51 @@ bool Clients::modifier()
 
     return query.exec();
 }
+
+
+// Metiers
+
+QSqlQueryModel * Clients::rechercherNom(QString nom)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from client where nom like '" +nom+"'");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("Cin"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("Adresse"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("Adresse mail"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("Date naissance"));
+
+    return model;
+}
+
+QSqlQueryModel * Clients::triNom()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from client order by nom");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("Cin"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("Adresse"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("Adresse mail"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("Date naissance"));
+
+    return model;
+}
+
+QSqlQueryModel * Clients::triDate()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from client order by date_naissance desc");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("Cin"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("Nom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("Prenom"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("Adresse"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("Adresse mail"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("Date naissance"));
+
+    return model;
+}
