@@ -2,7 +2,9 @@
 #include "ui_dialog.h"
 #include "client.h"
 #include "historique.h"
+#include "histo.h"
 #include "qrcode.h"
+#include "smtp.h"
 #include <QMessageBox>
 #include <QDate>
 #include <QIntValidator>
@@ -19,11 +21,16 @@
 #include <QPainter>
 #include <QtSvg/QSvgRenderer>
 #include <QtSvg/QSvgGenerator>
-#include<QDirModel>
+#include <QDirModel>
 #include <QtPrintSupport/QPrinter>
 #include <QtPrintSupport/QAbstractPrintDialog>
-#include<QDirModel>
+#include <QDirModel>
 #include <QtPrintSupport/QPrintDialog>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QErrorMessage>
+#include <QFile>
+#include <QDataStream>
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -32,6 +39,8 @@ Dialog::Dialog(QWidget *parent) :
     ui->setupUi(this);
     ui->affichageClient->setModel(Etmp.afficher());
     ui->affichageProduit_3->setModel(Etmp_h.afficherP());
+    connect(ui->envoyer, SIGNAL(clicked()),this, SLOT(sendMail()));  // Ajouter Boutton
+    connect(ui->browse, SIGNAL(clicked()), this, SLOT(browse())); // Ajouter Boutton
 
      combo();
 
@@ -72,6 +81,7 @@ void Dialog::on_ajouterClient_4_clicked()
             ui->affichageClient->setModel(Etmp.afficher());  //Actualiser
 
             QMessageBox::information(nullptr,QObject::tr("OK"),QObject::tr("Ajout effectué! \n" "Click cancel to exit"),QMessageBox::Cancel);
+            histor.save("cin :"+ui->ajouter_cin_4->text(),"nom :"+ui->ajouter_nom_4->text(),"prenom :"+ui->ajouter_prenom_4->text(),"adresse :"+ui->ajouter_adresse_4->text(),"adresse mail :"+ui->ajouter_adresseMail_4->text());
 
         }
         else
@@ -92,6 +102,7 @@ void Dialog::on_supprimerClient_4_clicked()
         ui->affichageClient->setModel(Etmp.afficher());  //Actualiser
 
         QMessageBox::information(nullptr,QObject::tr("OK"), QObject::tr("Suppression effectuée \n" "Click cancel to exit"), QMessageBox::Cancel);
+        histor1.save1("SUPPRIMER","cin :"+ui->cinClient_8->text());
 
     }
     else
@@ -121,6 +132,7 @@ void Dialog::on_modifierClient_4_clicked()
         ui->affichageClient->setModel(Etmp.afficher());  //Actualiser
 
         QMessageBox::information(nullptr,QObject::tr("OK"),QObject::tr("Modification effectuée! \n" "Click cancel to exit"),QMessageBox::Cancel);
+        histor.save2("SUPPRIMER","cin :"+ui->cinClient_8->text(),"nom :"+ui->modifier_nom_4->text(),"prenom :"+ui->modifier_prenom_4->text(),"adresse :"+ui->modifier_adresse_4->text(),"adresse mail :"+ui->modifier_adresseMail_4->text());
 
     }
     else
@@ -227,11 +239,6 @@ void Dialog::on_tri_nom_clicked()
 }
 
 
-void Dialog::on_tri_date_clicked()
-{
-    ui->affichageClient->setModel(Etmp.triDate());
-}
-
 void Dialog::on_QRCode_clicked()
 {
     if(ui->affichageClient->currentIndex().row()==-1)
@@ -253,4 +260,88 @@ void Dialog::on_QRCode_clicked()
          svgRenderer.render(&pixPainter);
          ui->label_6->setPixmap(pix);
     }
+}
+
+
+void  Dialog::browse()
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void   Dialog::sendMail()
+{
+    Smtp* smtp = new Smtp("moeness.gannouni@esprit.tn",ui->pass->text(), "smtp.gmail.com");
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail("moeness.gannouni@esprit.tn", ui->adresseMail->text() , ui->objet->text(),ui->message->toPlainText(), files );
+    else
+        smtp->sendMail("moeness.gannouni@esprit.tn", ui->adresseMail->text() , ui->objet->text(),ui->message->toPlainText());
+}
+
+void   Dialog::mailSent(QString status)
+{
+
+    if(status == "Message sent")
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    ui->adresseMail->clear();
+    ui->objet->clear();
+    ui->file->clear();
+    ui->message->clear();
+    ui->pass->clear();
+}
+
+
+
+void Dialog::on_browse_clicked()
+{
+  // browse();
+
+}
+
+void Dialog::on_envoyer_clicked()
+{
+   /* QString status;
+    sendMail();
+    mailSent(status);
+    */
+}
+
+
+void Dialog::on_pdf_6_clicked()
+{
+            QPrinter printer;
+            printer.setPrinterName("Printer Name");
+
+            QPrintDialog pDialog(&printer, this);
+
+            if(pDialog.exec() == QDialog::Rejected){
+                QMessageBox::warning(this, "Warning", "Cannot Access Printer");
+                return;
+            }
+            ui->affichageClient->render(&printer);
+
+}
+
+void Dialog::on_afficherHisto_clicked()
+{
+    QFile file("C:/Users/MOEµNESS/Desktop/QT/Tache clients/tache_clients/historique.txt");
+        if (!file.open(QIODevice::ReadOnly))
+            QMessageBox::information(0,"info",file.errorString());
+        QTextStream in(&file);
+        ui->textBrowser->setText(in.readAll());
 }

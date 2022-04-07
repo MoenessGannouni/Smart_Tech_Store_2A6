@@ -1,7 +1,8 @@
 QT       += core gui
 QT += sql
 QT  += svg
-
+QT += printsupport
+QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -21,22 +22,26 @@ SOURCES += \
     client.cpp \
     connection.cpp \
     dialog.cpp \
+    histo.cpp \
     historique.cpp \
     main.cpp \
     mainwindow.cpp \
     qrcode.cpp \
     qrcodegeneratordemo.cpp \
     qrcodegeneratorworker.cpp \
-    qrwidget.cpp
+    qrwidget.cpp \
+    smtp.cpp
 
 HEADERS += \
     client.h \
     connection.h \
     dialog.h \
+    histo.h \
     historique.h \
     mainwindow.h \
     qrcode.h \
-    qrwidget.h
+    qrwidget.h \
+    smtp.h
 
 FORMS += \
     dialog.ui \

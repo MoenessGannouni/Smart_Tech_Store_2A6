@@ -1,0 +1,19 @@
+
+ Vous avez supprimee : 
+cin :7777
+
+---------
+cin :1314
+nom :Df
+prenom :Df
+adresse :Dfff
+adresse mail :df@df.df
+-------------
+
+ Vous avez modifiee : 
+cin :1314
+nom :Df
+prenom :Dg
+adresse :Dfff
+adresse mail :df@df.df
+-------------
