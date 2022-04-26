@@ -46,6 +46,8 @@ public:
     QSqlQueryModel * triNom();
     QSqlQueryModel * triDate();
 
+    bool rech(int); //Recherche arduino
+
 
 
 

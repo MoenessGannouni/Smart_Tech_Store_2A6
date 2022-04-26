@@ -102,3 +102,10 @@ QSqlQueryModel * Clients::triNom()
     return model;
 }
 
+
+bool Clients::rech(int id)
+{
+    QString res=QString::number(id);
+    QSqlQuery q("select * from formateur where cin="+res);
+    return q.next();
+}

@@ -3,6 +3,7 @@
 #include "client.h"
 #include "historique.h"
 #include "histo.h"
+#include "arduino.h"
 
 #include <QFileDialog>
 
@@ -54,6 +55,8 @@ private slots:
 
     void on_afficherHisto_clicked();
 
+    void update_label();
+
 private:
     Ui::Dialog *ui;
     Clients Etmp;
@@ -63,6 +66,9 @@ private:
     histo histor;
     histo histor1;
     histo histor2;
+
+    QByteArray data; // variable contenant les données reçues
+    Arduino A;
 };
 
 #endif // DIALOG_H

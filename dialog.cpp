@@ -55,12 +55,53 @@ Dialog::Dialog(QWidget *parent) :
      QRegExp rxM("[a-z]{0,10}@[a-z]{0,10}.[a-z]{0,10}");
      ui->ajouter_adresseMail_4->setValidator(new QRegExpValidator(rxM,this));
 
+
+     //arduino
+     int ret=A.connect_arduino(); // lancer la connexion à arduino
+        switch(ret){
+        case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+            break;
+        case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+           break;
+        case(-1):qDebug() << "arduino is not available";
+        }
+         QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+         //le slot update_label suite à la reception du signal readyRead (reception des données).
+
+
 }
 
 Dialog::~Dialog()
 {
     delete ui;
 }
+
+
+//Arduino
+void Dialog::update_label()
+{
+data.append(A.read_from_arduino());
+if(data.length()==4)
+{
+    if(Etmp.rech(data.toInt()))
+    {
+
+        QMessageBox::information(nullptr, QObject::tr("OK"),
+                    QObject::tr("Client trouvé.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+        data.clear();
+    }else{
+        QMessageBox::critical(nullptr, QObject::tr(""),
+                    QObject::tr("Client non trouvé.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+        data.clear();
+    }
+}
+
+}
+
+
+
 
 void Dialog::on_ajouterClient_4_clicked()
 {
